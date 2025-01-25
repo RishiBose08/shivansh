@@ -1,0 +1,303 @@
+/* General Reset */
+body, h1, h2, ul, li, p, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Soft gradient background */
+    color: #333;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Header Styling */
+  header {
+    background: linear-gradient(90deg, #ff9a8b, #ff6a88, #ff99ac); /* Multicolored gradient */
+    color: white;
+    padding: 25px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Main Section */
+  main {
+    padding: 20px;
+  }
+  
+  #menu, #cart {
+    background-color: #fdfdfd;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #4a90e2; /* Highlighted headings */
+    border-bottom: 3px solid #4a90e2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Search Bar */
+  #search-bar {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px;
+    margin: 0 auto 25px auto;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #f7f7f7;
+    color: #333;
+    display: block;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  #search-bar::placeholder {
+    color: #aaa;
+  }
+  
+  /* Menu List */
+  ul#menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  ul#menu-list li {
+    background: linear-gradient(145deg, #ffecd2, #ffe1e5); /* Gentle gradient for each card */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  ul#menu-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  ul#menu-list li button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: linear-gradient(90deg, #ff758c, #ff7eb3); /* Vibrant button gradient */
+    border: none;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  ul#menu-list li button:hover {
+    background: linear-gradient(90deg, #ff6a88, #ff99ac);
+  }
+  
+  /* Cart Section */
+  #cart {
+    margin-top: 30px;
+  }
+  
+  ul#cart-list {
+    padding: 0;
+    list-style: none;
+    text-align: left;
+  }
+  
+  ul#cart-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #fff7f0;
+    padding: 12px;
+    border-radius: 12px;
+  }
+  
+  ul#cart-list li button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    background: linear-gradient(90deg, #4facfe, #00f2fe); /* Cool button gradient */
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  ul#cart-list li button:hover {
+    background: linear-gradient(90deg, #43e97b, #38f9d7);
+  }
+  
+  /* Cart Footer */
+  .cart-footer {
+    margin-top: 25px;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .cart-footer p {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  #checkout-btn {
+    background: linear-gradient(90deg, #fdc830, #f37335); /* Warm button gradient */
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  #checkout-btn:hover {
+    background: linear-gradient(90deg, #f37335, #fdc830);
+  }
+  
+  /* Modals */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal.hidden {
+    display: none;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4a90e2;
+  }
+  
+  .modal-content ul {
+    text-align: left;
+    margin: 15px 0;
+  }
+  
+  .modal-content button {
+    margin-top: 25px;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background: linear-gradient(90deg, #ff6a88, #ff99ac);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    ul#menu-list {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  
+    #menu, #cart {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+    }
+  }
+/* QR Code Styling */
+.qr-code-container {
+    margin-top: 20px;
+    text-align: center;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .qr-code-container p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .qr-code-container img.qr-code {
+    max-width: 150px;
+    width: 100%;
+    border: 3px solid #4a90e2;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .qr-code-container img.qr-code:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+    

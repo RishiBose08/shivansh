@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Ordering Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>NMIMS Fusion Feast</h1>
+    </header>
+    <main>
+      <div id="menu">
+        <h2>Menu</h2>
+        <input type="text" id="search-bar" placeholder="Search for dishes..." />
+        <ul id="menu-list">
+          <!-- Menu items dynamically loaded -->
+        </ul>
+      </div>
+      
+      <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-list">
+          <!-- Cart items dynamically added -->
+        </ul>
+        <div class="cart-footer">
+          <p>Total: ₹<span id="total-price">0</span></p>
+          <button id="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </main>
+    <div id="bill-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Bill</h2>
+        <p>Bill Number: <span id="bill-number"></span></p>
+        <ul id="bill-list">
+          <!-- Bill items dynamically added -->
+        </ul>
+        <p>Total: ₹<span id="bill-total"></span></p>
+        <button id="close-modal">Close</button>
+         <!-- QR Code Section -->
+      <div class="qr-code-container">
+        <p>Scan this QR code to pay:</p>
+        <img src="qr.jpeg" alt="QR Code for Payment" class="qr-code">
+      </div>
+
+      
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
